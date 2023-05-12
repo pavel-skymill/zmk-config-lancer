@@ -8,45 +8,49 @@
 #define OPTIONS 3
 
 #define PAUSE PAUSE_BREAK
+#define BT_0 BT_SEL 0
+#define BT_1 BT_SEL 1
+#define BT_2 BT_SEL 2
+#define BT_3 BT_SEL 3
 
 / {
-	keymap {
-		compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-		default_layer {
-			bindings = <
-				&kp Q		&kp W		&kp E		&kp R		&kp T		&kp Y		&kp U		&kp I		&kp O		&kp P
-				&kp A		&kp S		&kp D		&kp F		&kp G		&kp H		&kp J		&kp K		&kp L		&kp SEMI
-				&kp Z		&kp X		&kp C		&kp V		&kp B		&kp N		&kp M		&kp COMMA	&kp DOT		&kp ENTER
-										&kp LCTRL	&mo NUM_NAV	&kp SPACE	&kp BSPC	&kp LSHIFT	&mo SYMBOLS
-			>;
-		};
+        default_layer {
+            bindings = <
+                &kp Q       &kp DOWN    &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P
+                &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI
+                &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp ENTER
+                                        &kp LCTRL   &mo NUM_NAV &kp SPACE   &kp BSPC    &kp LSHIFT  &mo SYMBOLS
+            >;
+        };
 
-		num_nav_layer {
-			bindings = <
-				&kp TAB		&kp N7		&kp N8		&kp N9		&kp GRAVE	&kp C_PREV	&kp PG_UP	&kp UP		&kp PG_DN	&kp DEL
-				&kp ESC		&kp N4		&kp N5		&kp N6		&kp N0		&kp C_PP	&kp LEFT	&kp DOWN	&kp RIGHT	&kp RSHIFT
-				&kp LALT	&kp N1		&kp N2		&kp N3		&kp TILDE	&kp C_NEXT	&kp HOME	&kp INSERT	&kp END		&kp RALT
-										&trans		&trans		&trans		&trans		&kp LGUI	&mo OPTIONS
-			>;
-		};
+        num_nav_layer {
+            bindings = <
+                &kp TAB     &kp N7      &kp N8      &kp N9      &kp GRAVE   &kp C_PREV  &kp PG_UP   &kp UP      &kp PG_DN   &kp DEL
+                &kp ESC     &kp N4      &kp N5      &kp N6      &kp N0      &kp C_PP    &kp LEFT    &kp DOWN    &kp RIGHT   &kp RSHIFT
+                &kp LALT    &kp N1      &kp N2      &kp N3      &kp TILDE   &kp C_NEXT  &kp HOME    &kp INSERT  &kp END     &kp RALT
+                                        &trans      &trans      &trans      &trans      &kp LGUI    &mo OPTIONS
+            >;
+        };
 
-		symbols_layer {
-			bindings = <
-				&trans		&kp AMPS	&kp ASTRK	&kp BSLH	&kp LBKT	&kp RBKT	&kp UNDER	&kp PLUS	&kp DQT		&trans
-				&trans		&kp DLLR	&kp PRCNT	&kp CARET	&kp LPAR	&kp RPAR	&kp MINUS	&kp EQUAL	&kp SQT		&kp SLASH
-				&trans		&kp EXCL	&kp AT		&kp HASH	&kp LBRC	&kp RBRC	&kp PIPE	&kp SEMI	&kp COLON	&kp QMARK
-										&trans		&mo OPTIONS	&trans		&trans		&kp LSHIFT	&trans
-			>;
-		};
+        symbols_layer {
+            bindings = <
+                &trans      &kp AMPS    &kp ASTRK   &kp BSLH    &kp LBKT    &kp RBKT    &kp UNDER   &kp PLUS    &kp DQT     &trans
+                &trans      &kp DLLR    &kp PRCNT   &kp CARET   &kp LPAR    &kp RPAR    &kp MINUS   &kp EQUAL   &kp SQT     &kp SLASH
+                &trans      &kp EXCL    &kp AT      &kp HASH    &kp LBRC    &kp RBRC    &kp PIPE    &kp SEMI    &kp COLON   &kp QMARK
+                                        &trans      &mo OPTIONS &trans      &trans      &kp LSHIFT  &trans
+            >;
+        };
 
-		options_layer {
-			bindings = <
-				&bootloader	&kp F7		&kp F8		&kp F9		&kp F12		&kp PSCRN	&none			&none			&none			&bt BT_CLR
-				&kp CAPS	&kp F4		&kp F5		&kp F6		&kp F11		&kp SLCK	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3
-				&none		&kp F1		&kp F2		&kp F3		&kp F10		&kp PAUSE	&none		&none			&none			&none
-										&none		&trans		&none		&none		&none		&trans
-			>;
-		};
-	};	
+        options_layer {
+            bindings = <
+                &bootloader &kp F7      &kp F8      &kp F9      &kp F12     &kp PSCRN   &none       &none       &none       &bt BT_CLR
+                &kp CAPS    &kp F4      &kp F5      &kp F6      &kp F11     &kp SLCK    &bt BT_0    &bt BT_1    &bt BT_2    &bt BT_3
+                &none       &kp F1      &kp F2      &kp F3      &kp F10     &kp PAUSE   &none       &none       &none       &none
+                                        &none       &trans      &none       &none       &none       &trans
+            >;
+        };
+    };  
 };
