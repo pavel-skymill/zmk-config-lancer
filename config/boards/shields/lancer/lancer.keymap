@@ -104,7 +104,7 @@
                 &kp Q       &kp W       &kp E        &kp R       &kp T          &kp Y         &kp U         &kp I        &kp O      &kp P
                 &hm LGUI A  &hm LALT S  &shm LSHFT D &hm LCTRL F &kp G          &kp H         &hm RCTRL J   &shm RSHFT K &hm RALT L &hm RGUI BSLH
                 &kp Z       &kp X       &kp C        &kp V       &kp B          &kp N         &kp M         &kp COMMA    &kp DOT    &kp LS(N7)
-                                        &lt FUNC ESC &lt NAV TAB &kp MOUS SPACE &lt NUM ENTER &lt SYMB BSPC &lt EXTR DEL
+                                        &lt FUNC ESC &lt NAV TAB &lt MOUS SPACE &lt NUM ENTER &lt SYMB BSPC &lt EXTR DEL
 
             >;
         };
@@ -141,10 +141,10 @@
 
         symbols_layer {
             bindings = <
-                &kp RA(RBRC)  &none          &kp LS(N7)     &kp LS(N8)   &kp LS(N9)     &none  &none      &none      &none     &none
-                &kp RA(NON_US_BSLH)  &kp LS(MINUS)  &kp RA(N4)     &kp LS(N5)   &kp LS(N6)     &none  &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI
-                &none         &none          &kp LS(N1)     &kp LS(N2)   &kp LS(N3)     &none  &none      &none      &none     &none
-                                             &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &none  &none      &none
+                &kp RA(RBRC)        &none          &kp LS(N7)     &kp LS(N8)   &kp LS(N9)     &none  &none      &none      &none     &none
+                &kp RA(NON_US_BSLH) &kp LS(MINUS)  &kp RA(N4)     &kp LS(N5)   &kp LS(N6)     &none  &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI
+                &none               &none          &kp LS(N1)     &kp LS(N2)   &kp LS(N3)     &none  &none      &none      &none     &none
+                                                   &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &none  &none      &none
 
             >;
         };
@@ -154,17 +154,17 @@
                 &kp F12  &none   &kp F7   &kp F8   &kp F9   &bt BT_0     &bt BT_1    &bt BT_2    &bt BT_3    &bt BT_CLR
                 &kp F11  &none   &kp F4   &kp F5   &kp F6   &none        &kp RCTRL   &kp RSHFT   &kp RALT    &kp RGUI
                 &kp F10  &none   &kp F1   &kp F2   &kp F3   &none        &none       &none       &none       &bootloader
-                                     &none    &none    &none    &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP
+                                 &none    &none    &none    &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP
 
             >;
         };
 
         extras_layer {
             bindings = <
-                &kp NON_US_BSLH      &kp LS(NON_US_BSLH)    &kp RA(NON_US_BSLH) &kp RA(N6)   &none   &none  &none     &none     &none    &kp CAPS
-                &kp RA(N7)    &kp RA(N0)      &kp RA(N3)   &kp RA(N5)   &none   &none  &kp RCTRL &kp RSHFT &kp RALT &kp RGUI
-                &kp RA(N8)    &kp RA(N9)      &none        &kp RA(N2)   &none   &none  &none     &none     &none    &none
-                                              &kp LS(N8)   &kp LS(N9)   &none   &none  &none     &none     &none
+                &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp RA(NON_US_BSLH) &kp RA(N6)   &none   &none  &none     &none     &none    &kp CAPS
+                &kp RA(N7)      &kp RA(N0)          &kp RA(N3)          &kp RA(N5)   &none   &none  &kp RCTRL &kp RSHFT &kp RALT &kp RGUI
+                &kp RA(N8)      &kp RA(N9)          &none               &kp RA(N2)   &none   &none  &none     &none     &none    &none
+                                                    &kp LS(N8)          &kp LS(N9)   &none   &none  &none     &none     &none
 
             >;
         };
