@@ -11,7 +11,9 @@
 #define FUNC 5
 #define EXTR 6
 
-#define U_MOUSE_MOVE_MAX 1400                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 1500
+#define U_MOUSE_SCROLL_MAX 100
+
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
@@ -20,8 +22,6 @@
 #define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
-
-#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
@@ -39,11 +39,11 @@
 #define BT_3 BT_SEL 3
 
 &mmv {
-  time-to-max-speed-ms = <400>;
+  time-to-max-speed-ms = <300>;
 };
 
 &mwh {
-  time-to-max-speed-ms = <500>;
+  time-to-max-speed-ms = <600>;
 };
 
 &lt {
@@ -122,9 +122,9 @@
         mouse_layer {
             bindings = <
                 &none       &none       &none       &none       &none   &kp LC(Y)        &kp LC(V)      &kp LC(C)        &kp LC(X)         &kp LC(Z)
-                &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &none   &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_UP     &mmv MOVE_RIGHT   &kp PSCRN
-                &none       &none       &none       &none       &none   &mwh SCROLL_LEFT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &kp LS(INSERT)
-                                        &kp ESC     &kp TAB     &kp SPC &mkp LCLK        &mkp RCLK      &kp DEL
+                &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &none   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp PSCRN
+                &none       &none       &none       &none       &none   &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP  &mwh SCROLL_RIGHT &kp LS(INSERT)
+                                        &kp ESC     &kp TAB     &kp SPC &mkp LCLK        &mkp RCLK        &kp DEL
 
             >;
         };
