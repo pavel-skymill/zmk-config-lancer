@@ -10,6 +10,7 @@
 #define SYMB 4
 #define FUNC 5
 #define EXTR 6
+#define GAME 7
 
 #define U_MOUSE_MOVE_MAX 1500
 #define U_MOUSE_SCROLL_MAX 100
@@ -74,6 +75,12 @@
           key-positions = <25 26>;
           bindings = <&kp RBKT>;
       };
+      combo_game {
+          timeout-ms = <50>;
+          key-positions = <0 1 2 3 4>;
+          bindings = <&tog GAME>;
+          layers = <0 7>;
+      };
     };
     behaviours {
       hm: homerow_mods {
@@ -131,7 +138,7 @@
 
         number_layer {
             bindings = <
-                &kp RBKT      &kp LS(N0) &kp N7      &kp N8      &kp N9     &none       &none       &none       &none       &none
+                &kp EQUAL     &kp LS(N0) &kp N7      &kp N8      &kp N9     &none       &none       &none       &none       &none
                 &kp RA(MINUS) &kp LS(N7) &kp N4      &kp N5      &kp N6     &none       &kp RCTRL   &kp RSHFT   &kp RALT    &kp RGUI
                 &none         &none      &kp N1      &kp N2      &kp N3     &none       &none       &none       &none       &none
                                          &kp N0      &kp MINUS   &kp SLASH  &none       &none       &none
@@ -141,9 +148,9 @@
 
         symbols_layer {
             bindings = <
-                &kp LS(RBKT)        &none         &kp LS(N7)     &kp LS(N8)   &kp LS(N9)     &none  &none      &none      &none     &none
+                &kp RA(RBKT)        &none         &kp LS(N7)     &kp LS(N8)   &kp LS(N9)     &none  &none      &none      &none     &none
                 &kp RA(NON_US_BSLH) &kp LS(MINUS) &kp RA(N4)     &kp LS(N5)   &kp LS(N6)     &none  &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI
-                &none               &none         &kp LS(N1)     &kp LS(N2)   &kp LS(N3)     &none  &none      &none      &none     &none
+                &none               &none         &kp LS(N1)     &kp RA(N2)   &kp LS(N3)     &none  &none      &none      &none     &none
                                                   &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &none  &none      &none
 
             >;
@@ -163,8 +170,18 @@
             bindings = <
                 &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp RA(NON_US_BSLH) &kp RA(N6)   &none   &none  &none     &none     &none    &kp CAPS
                 &kp RA(N7)      &kp RA(N0)          &kp RA(N3)          &kp RA(N5)   &none   &none  &kp RCTRL &kp RSHFT &kp RALT &kp RGUI
-                &kp RA(N8)      &kp RA(N9)          &kp RA(TILDE)       &kp RA(N2)   &none   &none  &none     &none     &none    &none
+                &kp RA(N8)      &kp RA(N9)          &kp RA(TILDE)       &kp LS(N2)   &none   &none  &none     &none     &none    &none
                                                     &kp LS(N8)          &kp LS(N9)   &none   &none  &none     &none     &none
+
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+                &kp Q    &kp W  &kp E        &kp R       &kp T          &kp Y         &kp U         &kp I        &kp O      &kp P
+                &kp A    &kp S  &kp D        &kp F       &kp G          &kp H         &kp J         &kp K        &kp L      &kp BSLH
+                &kp Z    &kp X  &kp C        &kp V       &kp B          &kp N         &kp M         &kp COMMA    &kp DOT    &kp LS(N7)
+                                &lt FUNC ESC &lt NAV TAB &lt MOUS SPACE &lt NUM ENTER &lt SYMB BSPC &lt EXTR DEL
 
             >;
         };
