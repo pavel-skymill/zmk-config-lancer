@@ -77,7 +77,7 @@
       };
       combo_game {
           timeout-ms = <50>;
-          key-positions = <0 1 2 3 4>;
+          key-positions = <0 1 2>;
           bindings = <&tog GAME>;
           layers = <0 7>;
       };
