@@ -98,7 +98,7 @@
         #binding-cells = <2>;
         tapping-term-ms = <180>;
         quick-tap-ms = <145>;
-        flavor = "balanced";
+        flavor = "hold-preferred";
         bindings = <&kp>, <&kp>;
       };
     };
@@ -178,10 +178,10 @@
 
         gaming_layer {
             bindings = <
-            &mt LCTRL T &kp Q    &kp W  &kp E        &kp R                 &kp Y         &kp U         &kp I        &kp O      &kp P
-            &mt LSHFT G &kp A    &kp S  &kp D        &kp F                 &kp H         &kp J         &kp K        &kp L      &kp N0
-            &mt LALT B  &kp Z    &kp X  &kp C        &kp V                 &kp N         &kp M         &kp N3       &kp N4     &kp N5
-                                 &kp ESC &kp TAB &mt LCTRL SPACE &kp ENTER &kp N1 &kp N2
+            &mt ESC TAB &kp Q    &kp W  &kp E        &kp R                 &kp Y         &kp U         &kp I        &kp O      &kp P
+            &kp LSHFT   &kp A    &kp S  &kp D        &kp F                 &kp H         &kp J         &kp K        &kp L      &kp N0
+            &kp LALT    &kp Z    &kp X  &kp C        &kp V                 &kp N         &kp M         &kp N3       &kp N4     &kp N5
+                                 &kp LCTRL &kp LALT &kp SPACE &kp ENTER &kp N1 &kp N2
 
             >;
         };
