@@ -96,9 +96,9 @@
         compatible = "zmk,behavior-hold-tap";
         label = "SHIFT_HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <180>;
-        quick-tap-ms = <145>;
-        flavor = "hold-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <170>;
+        flavor = "balanced";
         bindings = <&kp>, <&kp>;
       };
     };
@@ -128,7 +128,7 @@
 
         mouse_layer {
             bindings = <
-                &none       &none       &none       &none       &none   &kp LC(Y)        &kp LC(V)      &kp LC(C)        &kp LC(X)         &kp LC(Z)
+                &none       &none       &none       &none       &none   &kp LC(Y)        &kp LC(V)        &kp LC(C)       &kp LC(X)         &kp LC(Z)
                 &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &none   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp PSCRN
                 &none       &none       &none       &none       &none   &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP  &mwh SCROLL_RIGHT &kp LS(INSERT)
                                         &kp ESC     &kp TAB     &kp SPC &mkp LCLK        &mkp RCLK        &kp DEL
@@ -158,9 +158,9 @@
 
         functions_layer {
             bindings = <
-                &kp F12  &none   &kp F7   &kp F8   &kp F9   &bt BT_0     &bt BT_1    &bt BT_2    &bt BT_3    &bt BT_CLR
+                &kp F12  &none   &kp F7   &kp F8   &kp F9   &kp LC(Y)    &kp LC(V)   &kp LC(C)   &kp LC(X)   &kp LC(Z)
                 &kp F11  &none   &kp F4   &kp F5   &kp F6   &none        &kp RCTRL   &kp RSHFT   &kp LALT    &kp RGUI
-                &kp F10  &none   &kp F1   &kp F2   &kp F3   &none        &none       &none       &none       &none
+                &kp F10  &none   &kp F1   &kp F2   &kp F3   &bt BT_0     &bt BT_1    &bt BT_2    &bt BT_3    &bt BT_CLR
                                  &none    &none    &none    &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP
 
             >;
