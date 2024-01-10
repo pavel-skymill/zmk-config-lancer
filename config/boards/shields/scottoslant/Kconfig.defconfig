@@ -1,0 +1,6 @@
+if SHIELD_SCOTTOSLANT
+
+config ZMK_KEYBOARD_NAME
+    default "ScottoSlant"
+
+endif
